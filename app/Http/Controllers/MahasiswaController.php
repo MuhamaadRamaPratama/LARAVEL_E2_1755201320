@@ -14,7 +14,7 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        return "Halaman Index Mahasiswa";
+        return view('mahasiswa.index');
         //$mhs = Mahasiswa::where('nim', '1755201320')->first();
 
         //return $mhs->nama_lengkap;
