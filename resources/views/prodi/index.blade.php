@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Prodi Page')
-@section('bread1', 'Prrogram Studi')
+@section('bread1', 'Program Studi')
 @section('bread2', 'Data')
 @section('content')
 	<h1>Master Data Program Studi</h1>
