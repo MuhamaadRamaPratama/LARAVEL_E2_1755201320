@@ -23,8 +23,8 @@ class MahasiswaController extends Controller
     {
         $mhs = Mahasiswa::with('mprodi')->get();
         return Datatables::of($mhs)->addIndexColumn()->addColumn('action', function ($mhs){
-                    $action = '<a class="text-primary"href="/mhs/edit/'.$mhs->nim.'">Edit</a>';
-                    $action .= ' | <a class="text-danger"href="/mhs/delete/'.$mhs->nim.'">Hapus</a>';
+                    $action = '<button class="btn btn-primary " ><a class="text-light"href="/mhs/edit/'.$mhs->nim.'">Edit</a></button>';
+                    $action .= '  <button class="btn btn-danger " ><a class="text-light"href="/mhs/delete/'.$mhs->nim.'">Hapus</a></button>';
                     return $action;
                })->make();
 

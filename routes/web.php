@@ -28,3 +28,16 @@ Route::put('/mhs/update/{mahasiswa:nim}', 'MahasiswaController@update')->name('m
 Route::get('/mhs/delete/{mahasiswa:nim}', 'MahasiswaController@destroy')->name('mhs.delete');
 //Prodi (Route Framework)
 Route::resource('/prodi', 'ProdiController');
+
+Route::resource('/mk', 'mkController');
+
+
+Route::get('/', 'mkController@index'); 
+//Mahasiswa (Route dengan detail satu persatu)
+Route::get('/matakuliah', 'mkController@index')->name('matakuliah.index'); 
+Route::get('/matakuliah/list', 'mkController@matakuliah_list')->name('matakuliah.list'); 
+Route::get('/matakuliah/create', 'mkController@create'); 
+Route::post('/matakuliah/store', 'mkController@store'); 
+Route::get('/matakuliah/{kode_mk}/edit', 'mkController@edit'); 
+Route::put('/matakuliah/{kode_mk}/update', 'mkController@update')->name('matakuliah.update'); 
+Route::delete('/matakuliah/{kode_mk}', 'mkController@destroy')->name('matakuliah.delete'); 
